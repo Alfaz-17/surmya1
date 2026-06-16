@@ -55,7 +55,7 @@ export function Navbar() {
 
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 flex items-center justify-between h-14 md:h-24">
           {/* Mobile: Hamburger | Desktop: Left Links */}
-          <div className="flex-1 flex items-center">
+          <div className="flex-none lg:flex-1 flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(true)}
               className="lg:hidden p-2 -ml-2 text-zinc-900 hover:text-primary transition-colors"
@@ -78,7 +78,7 @@ export function Navbar() {
           </div>
 
           {/* Center Logo */}
-          <div className="flex-none flex items-center justify-center mx-4 lg:mx-12">
+          <div className="flex-1 lg:flex-none flex items-center justify-center mx-1 sm:mx-4 lg:mx-12">
             <a href="#home" className="flex items-center group">
               <Image
                 src="/logo.webp"
@@ -92,11 +92,11 @@ export function Navbar() {
           </div>
 
           {/* Mobile: Phone CTA | Desktop: Right Links */}
-          <div className="flex-1 flex items-center justify-end gap-2">
+          <div className="flex-none lg:flex-1 flex items-center justify-end gap-2">
             {/* Mobile phone button */}
             <a
               href="tel:+919876543210"
-              className="lg:hidden flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white shadow-md transition-colors hover:bg-primary/90"
+              className="lg:hidden flex shrink-0  items-center justify-center w-10 h-10 rounded-full bg-primary text-white shadow-md transition-colors hover:bg-primary/90"
               aria-label="Call us"
             >
               <Phone className="w-5 h-5 fill-current" />
