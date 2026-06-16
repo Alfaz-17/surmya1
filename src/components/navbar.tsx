@@ -93,13 +93,13 @@ export function Navbar() {
 
           {/* Mobile: Phone CTA | Desktop: Right Links */}
           <div className="flex-1 flex items-center justify-end gap-2">
-            {/* Mobile phone icon */}
+            {/* Mobile phone button */}
             <a
               href="tel:+919876543210"
-              className="lg:hidden p-2 transition-colors text-zinc-900 hover:text-primary"
+              className="lg:hidden flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white shadow-md transition-colors hover:bg-primary/90"
               aria-label="Call us"
             >
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5 fill-current" />
             </a>
 
             <nav className="hidden lg:flex items-center gap-8 h-full">

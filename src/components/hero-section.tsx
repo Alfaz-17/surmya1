@@ -28,7 +28,7 @@ export function HeroSection() {
             backgroundImage: `url('/images/hero_hd.png')`,
           }}
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/60 sm:bg-black/50" />
       </motion.div>
 
       {/* Content */}
@@ -39,17 +39,17 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-[10px] sm:text-xs tracking-[0.4em] uppercase text-primary mb-4 sm:mb-6 block">
+            <span className="text-[11px] sm:text-xs tracking-[0.4em] uppercase text-primary mb-4 sm:mb-6 block font-bold drop-shadow-md">
               Premium Residential Community
             </span>
 
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-7xl text-white mb-6 sm:mb-8 leading-[1.15] text-balance">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl text-white mb-6 sm:mb-8 leading-[1.2] text-balance font-bold drop-shadow-2xl">
               Welcome to
               <br />
               Suramya 1
             </h1>
 
-            <p className="text-white/70 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-12 px-2">
+            <p className="text-white/90 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto mb-8 sm:mb-12 px-2 font-medium drop-shadow-md">
               A peaceful and premium residential community designed for modern
               family living surrounded by greenery and comfort.
             </p>
