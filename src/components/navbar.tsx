@@ -144,13 +144,13 @@ export function Navbar() {
               className="fixed top-0 left-0 bottom-0 w-[85vw] max-w-[400px] z-[70] bg-white shadow-2xl flex flex-col"
             >
               {/* Header */}
-              <div className="flex items-center justify-between p-5 border-b border-zinc-200">
+              <div className="flex items-center justify-between p-4 sm:p-5 border-b border-zinc-200">
                 <Image
                   src="/logo.png"
                   alt="Suramya 1"
-                  width={120}
-                  height={40}
-                  className="h-48 w-auto object-contain"
+                  width={140}
+                  height={50}
+                  className="h-40 sm:h-12 w-auto object-contain"
                 />
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}

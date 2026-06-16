@@ -98,12 +98,12 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll Indicator — hidden on small mobile */}
+      {/* Scroll Indicator — visible on all screens */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-10 hidden sm:block"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
         <motion.div
           animate={{ y: [0, 12, 0] }}
