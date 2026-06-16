@@ -50,7 +50,7 @@ export function Navbar() {
         {/* Scroll Progress Bar */}
         <motion.div
           style={{ scaleX: scrollYProgress }}
-          className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary origin-left z-10"
+          className="absolute bottom-0 left-0 right-0 h-[4px] bg-primary origin-left z-10"
         />
 
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 flex items-center justify-between h-14 md:h-24">
