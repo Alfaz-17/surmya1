@@ -81,7 +81,7 @@ export function Navbar() {
           <div className="flex-none flex items-center justify-center mx-4 lg:mx-12">
             <a href="#home" className="flex items-center group">
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Suramya 1"
                 width={240}
                 height={200}
@@ -146,7 +146,7 @@ export function Navbar() {
               {/* Header */}
               <div className="flex items-center justify-between p-4 sm:p-5 border-b border-zinc-200">
                 <Image
-                  src="/logo.png"
+                  src="/logo.webp"
                   alt="Suramya 1"
                   width={140}
                   height={50}

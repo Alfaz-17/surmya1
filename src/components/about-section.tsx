@@ -92,15 +92,11 @@ export function AboutSection() {
             className="relative"
           >
             <div className="relative aspect-[4/3] sm:aspect-[4/5] overflow-hidden">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
+              <img
+                src="/images/IMG_6114.webp"
+                alt="Community Lifestyle"
                 className="absolute inset-0 w-full h-full object-cover"
-              >
-                <source src="/images/IMG_6114.MP4" type="video/mp4" />
-              </video>
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </div>
 
