@@ -1,167 +1,62 @@
 @import "tailwindcss";
 
+/* Suramya 1 — White / Green / Gold Accent */
 :root {
   --background: #ffffff;
-  --foreground: #1a1a2e;
+  --foreground: #000000;
 
-  /* Green/Gold Accent Palette */
-  --green-50: #f0fdf4;
-  --green-100: #dcfce7;
-  --green-200: #bbf7d0;
-  --green-300: #86efac;
-  --green-400: #4ade80;
-  --green-500: #2d8a4e;
-  --green-600: #1e6b3a;
-  --green-700: #15803d;
-  --green-800: #166534;
-  --green-900: #14532d;
+  --card: #f7f7f5;
+  --card-foreground: #000000;
 
-  --gold-50: #fffbeb;
-  --gold-100: #fef3c7;
-  --gold-200: #fde68a;
-  --gold-300: #fcd34d;
-  --gold-400: #d4a843;
-  --gold-500: #b8922e;
-  --gold-600: #92751e;
-  --gold-700: #78611a;
+  /* BRAND GREEN */
+  --primary: #2d8a4e;
+  --primary-foreground: #ffffff;
 
-  --section-gap: 6rem;
+  --secondary: #f0f0ec;
+  --secondary-foreground: #000000;
+
+  --muted: #f5f5f5;
+  --muted-foreground: #555555;
+
+  --accent: #d4a843;
+  --accent-foreground: #ffffff;
+
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #2d8a4e;
+
+  --radius: 0rem;
 }
 
 @theme inline {
+  --font-sans: "Inter", "Inter Fallback", sans-serif;
+  --font-serif: "Playfair Display", "Playfair Display Fallback", serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-playfair);
-
-  --color-green-50: var(--green-50);
-  --color-green-100: var(--green-100);
-  --color-green-200: var(--green-200);
-  --color-green-300: var(--green-300);
-  --color-green-400: var(--green-400);
-  --color-green-500: var(--green-500);
-  --color-green-600: var(--green-600);
-  --color-green-700: var(--green-700);
-  --color-green-800: var(--green-800);
-  --color-green-900: var(--green-900);
-
-  --color-gold-50: var(--gold-50);
-  --color-gold-100: var(--gold-100);
-  --color-gold-200: var(--gold-200);
-  --color-gold-300: var(--gold-300);
-  --color-gold-400: var(--gold-400);
-  --color-gold-500: var(--gold-500);
-  --color-gold-600: var(--gold-600);
-  --color-gold-700: var(--gold-700);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter), system-ui, sans-serif;
-  overflow-x: hidden;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-::-webkit-scrollbar-thumb {
-  background: var(--green-500);
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--green-600);
-}
-
-/* Section Headings */
-.section-title {
-  font-family: var(--font-playfair), serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.section-subtitle {
-  color: var(--green-500);
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-}
-
-/* Decorative line under headings */
-.heading-line {
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--green-500), var(--gold-400));
-  border-radius: 2px;
-}
-
-/* Glass card effect */
-.glass-card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* Gold gradient text */
-.text-gradient {
-  background: linear-gradient(135deg, var(--green-600), var(--gold-500));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Hover card lift */
-.card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-/* Shimmer animation for loading states */
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-.shimmer {
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
-  background-size: 200% 100%;
-  animation: shimmer 2s infinite;
-}
-
-/* Fade in up animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+@layer base {
+  * {
+    @apply border-border;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  body {
+    @apply bg-background text-foreground;
   }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-/* Pulse glow */
-@keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(45, 138, 78, 0.4); }
-  50% { box-shadow: 0 0 20px 10px rgba(45, 138, 78, 0); }
-}
-
-.pulse-glow {
-  animation: pulseGlow 2s infinite;
 }
